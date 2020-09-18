@@ -66,7 +66,7 @@
 #endif
 
 #ifndef MACHINE_SIZE
-  #define MACHINE_SIZE "200x220x250"
+  #define MACHINE_SIZE "220x220x250"
 #endif
 #ifndef CORP_WEBSITE_C
   #define CORP_WEBSITE_C "www.cxsw3d.com"
