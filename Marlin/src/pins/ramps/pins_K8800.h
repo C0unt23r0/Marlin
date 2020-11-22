@@ -113,7 +113,7 @@
   #define LCD_CONTRAST_MAX                   100
   #define DEFAULT_LCD_CONTRAST                30
 
-  #if IS_NEWPANEL
+  #if ENABLED(NEWPANEL)
     #define BTN_EN1                           17
     #define BTN_EN2                           16
     #define BTN_ENC                           23

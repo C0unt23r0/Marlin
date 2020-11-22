@@ -47,6 +47,7 @@
 
 #define STEP_TIMER 10
 #define TEMP_TIMER 14
+#define HAL_TIMER_RATE                     F_CPU
 
 //
 // Limit Switches
@@ -160,7 +161,7 @@
     #define DOGLCD_A0                       PE14
   #endif
 
-  #if IS_ULTIPANEL
+  #if ENABLED(ULTIPANEL)
     #define LCD_PINS_D5                     PE13
     #define LCD_PINS_D6                     PE14
     #define LCD_PINS_D7                     PE15

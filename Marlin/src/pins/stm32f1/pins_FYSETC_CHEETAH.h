@@ -29,11 +29,10 @@
 
 #define BOARD_INFO_NAME   "FYSETC Cheetah"
 #define BOARD_WEBSITE_URL "fysetc.com"
+// https://github.com/FYSETC/Cheetah
 
 // Ignore temp readings during development.
 //#define BOGUS_TEMPERATURE_GRACE_PERIOD    2000
-
-#define BOARD_NO_NATIVE_USB
 
 #define DISABLE_JTAG
 
@@ -154,7 +153,7 @@
 
   //#define LCD_CONTRAST_INIT                190
 
-  #if IS_NEWPANEL
+  #if ENABLED(NEWPANEL)
     #define BTN_EN1                         PC10
     #define BTN_EN2                         PC11
     #define BTN_ENC                         PC12

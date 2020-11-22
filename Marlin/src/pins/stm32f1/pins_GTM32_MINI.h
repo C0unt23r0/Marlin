@@ -33,8 +33,6 @@
 #define BOARD_INFO_NAME      "GTM32 Pro VB"
 #define DEFAULT_MACHINE_NAME "STM32F103VET6"
 
-#define BOARD_NO_NATIVE_USB
-
 //#define DISABLE_DEBUG
 
 //
@@ -139,7 +137,7 @@
 //
 #if HAS_WIRED_LCD
 
-  #if IS_RRD_SC
+  #if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER)
     //
     // LCD display on J2 FFC40
     // Geeetech's LCD2004A Control Panel is very much like
@@ -174,7 +172,7 @@
 
 #endif // HAS_WIRED_LCD
 
-#if IS_RRD_SC
+#if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER)
   //
   // Geeetech's LCD2004A Control Panel is very much like
   // RepRapDiscount Smart Controller, but adds an FFC40 connector

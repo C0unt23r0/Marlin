@@ -123,7 +123,7 @@
 
   #define BEEPER_PIN                          18
 
-  #if IS_NEWPANEL
+  #if ENABLED(NEWPANEL)
 
     #define LCD_PINS_RS                       20
     #define LCD_PINS_ENABLE                   17
@@ -139,7 +139,7 @@
 
     #define SD_DETECT_PIN                     38
 
-  #else                                           // !IS_NEWPANEL - Old style panel with shift register
+  #else                                           // !NEWPANEL - Old style panel with shift register
 
     // Buttons attached to a shift register
     #define SHIFT_CLK                         38
@@ -156,7 +156,7 @@
 
     #define SD_DETECT_PIN                     -1
 
-  #endif // !IS_NEWPANEL
+  #endif // !NEWPANEL
 
 #endif // HAS_WIRED_LCD
 

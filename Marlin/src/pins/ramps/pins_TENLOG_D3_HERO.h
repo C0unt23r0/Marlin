@@ -163,7 +163,7 @@
 // LCD / Controller
 //
 
-//#if IS_RRD_SC
+//#if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER)
 
 #define LCD_PINS_RS                           -1
 #define LCD_PINS_ENABLE                       -1
@@ -182,4 +182,4 @@
 #define BEEPER_PIN                            -1
 //#endif
 
-//#endif // IS_RRD_SC
+//#endif // REPRAP_DISCOUNT_SMART_CONTROLLER

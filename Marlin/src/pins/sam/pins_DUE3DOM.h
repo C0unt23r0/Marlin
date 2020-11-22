@@ -122,7 +122,7 @@
   #define LCD_PINS_D6                         46
   #define LCD_PINS_D7                         47
 
-  #if IS_RRD_SC
+  #if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER)
 
     #define BEEPER_PIN                        41
 

@@ -96,7 +96,7 @@
 // Display
 //
 
-#if IS_RRD_FG_SC
+#if ENABLED(REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
     #define LCD_PINS_RS                    P0_16
     #define LCD_PINS_ENABLE                P0_18
     #define LCD_PINS_D4                    P0_15
@@ -110,4 +110,4 @@
     #define BTN_ENC                        P1_30
 
     #define SD_DETECT_PIN                  -1
-#endif // IS_RRD_FG_SC
+#endif // REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER

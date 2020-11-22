@@ -23,11 +23,10 @@
 
 #if HAS_TFT_LVGL_UI
 
-#include "tft_lvgl_configuration.h"
+#include "draw_ui.h"
 
 #if ENABLED(USE_WIFI_FUNCTION)
 
-#include "draw_ui.h"
 #include "wifiSerial.h"
 
 #include <libmaple/libmaple.h>

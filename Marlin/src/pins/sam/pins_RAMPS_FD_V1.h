@@ -148,7 +148,7 @@
   #define BTN_ENC                             35
   #define SD_DETECT_PIN                       49
 
-  #if IS_NEWPANEL
+  #if ENABLED(NEWPANEL)
     #define LCD_PINS_RS                       16
     #define LCD_PINS_ENABLE                   17
   #endif
@@ -178,7 +178,7 @@
       #define NEOPIXEL_PIN                    25
     #endif
 
-  #elif IS_NEWPANEL
+  #elif ENABLED(NEWPANEL)
 
     #define LCD_PINS_D4                       23
     #define LCD_PINS_D5                       25

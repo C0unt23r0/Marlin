@@ -175,7 +175,7 @@
     #else                                         // !FYSETC_MINI_12864
 
       #define LCD_PINS_D4                   PC13
-      #if IS_ULTIPANEL
+      #if ENABLED(ULTIPANEL)
         #define LCD_PINS_D5                 PB7
         #define LCD_PINS_D6                 PC15
         #define LCD_PINS_D7                 PC14
@@ -210,13 +210,14 @@
 #endif
 
 #if SD_CONNECTION_IS(LCD)
-  #define SPI_DEVICE                           3
+  #define ENABLE_SPI3
   #define SD_DETECT_PIN                     PB9
   #define SCK_PIN                           PB3
   #define MISO_PIN                          PB4
   #define MOSI_PIN                          PB5
   #define SS_PIN                            PA15
 #elif SD_CONNECTION_IS(ONBOARD)
+  #define ENABLE_SPI1
   #define SD_DETECT_PIN                     PA3
   #define SCK_PIN                           PA5
   #define MISO_PIN                          PA6

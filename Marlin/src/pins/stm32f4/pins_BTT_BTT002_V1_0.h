@@ -228,7 +228,7 @@
     #define LCD_PINS_ENABLE                 PE9
     #define LCD_PINS_D4                     PE10
 
-    #if IS_ULTIPANEL
+    #if ENABLED(ULTIPANEL)
       #define LCD_PINS_D5                   PE11
       #define LCD_PINS_D6                   PE12
       #define LCD_PINS_D7                   PE13

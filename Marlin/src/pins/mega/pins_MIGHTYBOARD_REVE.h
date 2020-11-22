@@ -214,7 +214,7 @@
 //
 #if HAS_WIRED_LCD
 
-  #if IS_RRD_FG_SC
+  #if ENABLED(REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
 
     #define LCD_PINS_RS                       33  // C4: LCD-STROBE
     #define LCD_PINS_ENABLE                   72  // J2: LEFT

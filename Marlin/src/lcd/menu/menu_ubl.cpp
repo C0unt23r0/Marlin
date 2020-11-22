@@ -64,7 +64,7 @@ static void _lcd_mesh_fine_tune(PGM_P const msg) {
       ubl.encoder_diff > 0 ? 0.005f : -0.005f
     );
     ubl.encoder_diff = 0;
-    IF_DISABLED(IS_TFTGLCD_PANEL, ui.refresh(LCDVIEW_CALL_REDRAW_NEXT));
+    TERN(IS_TFTGLCD_PANEL,,ui.refresh(LCDVIEW_CALL_REDRAW_NEXT));
   }
   TERN_(IS_TFTGLCD_PANEL, ui.refresh(LCDVIEW_CALL_REDRAW_NEXT));
 
@@ -188,10 +188,11 @@ void _lcd_ubl_edit_mesh() {
    */
   void _lcd_ubl_validate_custom_mesh() {
     char ubl_lcd_gcode[24];
+    const int16_t temp = TERN(HAS_HEATED_BED, custom_bed_temp, 0);
     sprintf_P(ubl_lcd_gcode, PSTR("G28\nG26 C P H%" PRIi16 TERN_(HAS_HEATED_BED, " B%" PRIi16))
       , custom_hotend_temp
       #if HAS_HEATED_BED
-        , custom_bed_temp
+        , temp
       #endif
     );
     queue.inject(ubl_lcd_gcode);

@@ -78,7 +78,7 @@
 //
 #if HAS_WIRED_LCD
 
-  #if BOTH(IS_NEWPANEL, PANEL_ONE)
+  #if BOTH(NEWPANEL, PANEL_ONE)
     #undef LCD_PINS_D4
     #define LCD_PINS_D4                       68
 
@@ -89,7 +89,7 @@
     #define LCD_PINS_D7                       67
   #endif
 
-  #if IS_NEWPANEL
+  #if ENABLED(NEWPANEL)
 
     #if ENABLED(REPRAPWORLD_GRAPHICAL_LCD)
 
@@ -115,7 +115,7 @@
 
     #else
 
-      #if IS_RRW_KEYPAD
+      #if ENABLED(REPRAPWORLD_KEYPAD)
         #undef BTN_EN1
         #define BTN_EN1                       67  // encoder
 
@@ -127,6 +127,6 @@
       #endif
     #endif
 
-  #endif // IS_NEWPANEL
+  #endif // NEWPANEL
 
 #endif // HAS_WIRED_LCD

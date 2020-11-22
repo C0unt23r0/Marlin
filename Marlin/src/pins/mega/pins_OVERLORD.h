@@ -132,7 +132,7 @@
   #endif
 #endif
 
-#if IS_NEWPANEL
+#if ENABLED(NEWPANEL)
   #define BTN_ENC                             16  // Enter Pin
   #define BTN_UP                              19  // Button UP Pin
   #define BTN_DWN                             17  // Button DOWN Pin

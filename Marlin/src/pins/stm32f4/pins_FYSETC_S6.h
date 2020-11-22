@@ -34,8 +34,8 @@
   #define DEFAULT_MACHINE_NAME BOARD_INFO_NAME
 #endif
 
-// Avoid conflict with TIMER_TONE defined in variant
-#define STEP_TIMER 10
+// Change the priority to 3. Priority 2 is for software serial.
+//#define TEMP_TIMER_IRQ_PRIO                  3
 
 //
 // EEPROM Emulation
@@ -252,7 +252,7 @@
       #endif
     #endif // !FYSETC_MINI_12864
 
-    #if IS_ULTIPANEL
+    #if ENABLED(ULTIPANEL)
       #define LCD_PINS_D5                   PC12
       #define LCD_PINS_D6                   PD0
       #define LCD_PINS_D7                   PD1
